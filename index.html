@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Display National Parks App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Search national parks per state">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>DISPLAY NATIONAL PARKS APP</h1>
+        </header>
+
+        <main role="main">
+            <section class="interface">
+                <form class="main_form">
+                    <fieldset>
+                        <legend>LIST NATIONAL PARKS VIA STATE</legend>
+                        <label for="state_input">State Code
+                            <input class="state_code" name="state_input" id="state_input" type="text" placeholder="CA" minlength="2" maxlength="2" size="2" required >
+                        </label>
+                        <label for="max_results">Maximum results to return
+                            <input class="max_num" name="max_results" id="max_results" type="number" min="1" value="10">
+                        </label>
+                        <div>
+                            <button class="srchPark_btn" type="submit">Get Parks</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section class="display" hidden>
+                <div clas="display_container">
+                    <ol class="parks_list"></ol>
+                </div>
+            </section>
+
+            <section class="error_sect" hidden>
+
+            </section>
+        </main>
+
+        <footer>
+            <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+            <script src="states.js" type="text/javascript"></script>
+            <script src="script.js" type="text/javascript"></script>
+        </footer>
+    </body>
+</html>

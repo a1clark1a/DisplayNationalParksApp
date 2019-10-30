@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 30px;
+}
+
+h1{
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+fieldset{
+    
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.state_code, .srchPark_btn, .max_num{
+    text-align: center;
+    font-size: 30px;
+}
+
+.max_num{
+    width: 10%;
+}
+
+.srchPark_btn{
+    padding: 10px;
+}
+
+legend, button, input {
+    margin: 20px;
+}
+
+.display {
+    margin-top: 30px;
+}
+
+.error_txt{
+    font-size: 30px;
+    color: red;
+}
+
+section{
+    margin-top: 50px;
+}
+
+.description{
+    font-size: 20px;
+}
+
+li{
+    width: 500px;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+.parks_list > li{
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
