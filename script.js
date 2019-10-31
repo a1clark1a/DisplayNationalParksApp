@@ -9,7 +9,19 @@ function checkInput()
     {
         const stateCode = $('.state_code').val();
         const maxNum = $('.max_num').val();
-        if(stateCode === "" || maxNum <= 0 || !STATES.find(e => e === stateCode))
+        const stateArray = stateCode.split(',');
+        let hasStateCode =  false;
+        stateArray.forEach(elem => 
+        {
+            if(!STATES.find(e => e === elem))
+            {
+                hasStateCode =false;
+            }
+            else{
+                hasStateCode =  true;
+            }
+        })
+        if(stateCode === "" || maxNum <= 0  || !hasStateCode)
         {
             alert("WRONG INPUT/WRONG NUMBER");
         }
@@ -96,13 +108,12 @@ function displayParks(jsonObj)
 function displayError(error)
 {
     clearDisplay();
-
     $('.error_sect').removeAttr('hidden');
 }
 
 function clearDisplay()
 {
-    $('.display_container').empty();
+    $('.parks_list').empty();
     $('.error_sect').empty();
 }
 
