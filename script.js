@@ -108,6 +108,7 @@ function displayParks(jsonObj)
 function displayError(error)
 {
     clearDisplay();
+    $('.error_sect').append(`<h2 class="error_txt">Uh oh Something went wrong! ${error.message}</h2>`)
     $('.error_sect').removeAttr('hidden');
 }
 
